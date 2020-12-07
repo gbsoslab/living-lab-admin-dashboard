@@ -9,8 +9,11 @@
       .controller('BlurFeedCtrl', BlurFeedCtrl);
 
   /** @ngInject */
-  function BlurFeedCtrl($scope) {
-    $scope.feed = [
+  function BlurFeedCtrl($scope, $firebaseArray) {
+    var ref = firebase.database().ref().child("userMessages");
+    $scope.feed = $firebaseArray(ref);
+    //   $scope.feed = [
+      var a = [
       {
         type: 'text-message',
         author: 'Kostya',

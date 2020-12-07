@@ -1,20 +1,20 @@
 <form class="row form-inline">
   <div class="form-group col-sm-3 col-xs-6">
-    <ui-select ng-model="selectedItem.selected"
+    <ui-select ng-model="ctrl.area.selected"
                class="btn-group bootstrap-select form-control"
                ng-disabled="false"
                append-to-body="true"
                search-enabled="false">
-      <ui-select-match placeholder="Standard Select">
+      <ui-select-match placeholder="지역 선택">
         <span> {{$select.selected.label}}</span>
       </ui-select-match>
-      <ui-select-choices repeat="standardItem in selectpickerVm.standardSelectItems | filter: $select.search">
+      <ui-select-choices repeat="standardItem in standardSelectItems">
         <span ng-bind-html="standardItem.label"></span>
       </ui-select-choices>
     </ui-select>
   </div>
   <div class="form-group col-sm-3 col-xs-6">
-    <input type="text" class="form-control" ng-model="text" placeholder="내용을 입력하세요">
+    <input class="form-control" ng-model="sendText" placeholder="내용을 입력하세요">
   </div>
-  <button type="submit" class="btn btn-primary">알림 발송</button>
+  <button class="btn btn-primary" ng-click="sendMessage(sendText)">알림 발송</button>
 </form>

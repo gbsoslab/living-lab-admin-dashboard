@@ -13,25 +13,26 @@
     var pieColor = baUtil.hexToRGB(baConfig.colors.defaultText, 0.2);
     $scope.charts = [{
       color: pieColor,
-      description: 'New Visits',
-      stats: '57,820',
+      description: '신규 사용자',
+      stats: '570',
       icon: 'person',
     }, {
       color: pieColor,
-      description: 'Purchases',
-      stats: '$ 89,745',
-      icon: 'money',
-    }, {
-      color: pieColor,
-      description: 'Active Users',
-      stats: '178,391',
-      icon: 'face',
-    }, {
-      color: pieColor,
-      description: 'Returned',
-      stats: '32,592',
+      description: '재 방문자',
+      stats: '89',
       icon: 'refresh',
+    }, {
+      color: pieColor,
+      description: '활성 사용자',
+      stats: '1,781',
+      icon: 'face',
     }
+    // , {
+    //   color: pieColor,
+    //   description: 'Returned',
+    //   stats: '32,592',
+    //   icon: 'refresh',
+    // }
     ];
 
     function getRandomArbitrary(min, max) {
